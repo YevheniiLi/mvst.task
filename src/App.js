@@ -1,9 +1,10 @@
 import './App.css';
+import {queryComponent} from './useQuery';
 
 function App() {
   return (
     <div>
-      <input type='search'></input>
+      {queryComponent()}
     </div>
   );
 }
@@ -12,8 +13,6 @@ export default App;
 
 
 //  Создать веб-приложение, используя React и TypeScript.
-
-// создание инпут поиска create input search 
   
 // Использовать официальное GitHub API для получения репозиториев пользователя.  >> https://docs.github.com/en/rest?apiVersion=2022-11-28
 
