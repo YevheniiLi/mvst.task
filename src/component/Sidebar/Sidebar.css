@@ -1,0 +1,109 @@
+.sidebar {
+    padding: 0 24px;
+}
+
+.name {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #24292e; 
+    margin: 0;
+    line-height: normal;
+  }
+
+.username {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #656D76;
+    font-size: 20px;
+    padding-bottom: 16px;
+}
+
+.bio {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #1F2328;
+    font-size: 18px;
+    padding-bottom: 16px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    display: flex;
+    text-align: center;
+    flex: 1;
+    padding: 0 10px;
+}
+
+.stat-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #6a737d; 
+}
+
+  .stat-number {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+.avatar {
+    border-radius: 30%;
+    transform: scaleX(-1);
+}
+
+.follow-button {
+    width: 100%;
+    background-color: #F6F8FA;
+    color: #ffffff;
+    border: 1px solid #ddd;;
+    border-radius: 6px;
+    padding: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;
+    &:hover {
+      background-color: #e1e4e7;
+    }
+  }
+
+  .icon-followers {
+    color: #6a737d;
+    size: 8px;
+    margin: 2px 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .icon-star{
+    size: 8px;
+    margin: 3px 5px;
+    cursor: pointer;
+  }
+
+  .email {
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+}
+
+.email-icon {
+    size: 10px;
+    margin: 4px 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+  
+  
+  
+  
+  
+  

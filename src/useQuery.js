@@ -1,8 +1,8 @@
 import { useQuery, gql } from "@apollo/client";
 
 const GET_REPOSITORIES = gql`
-  query GetRepositories {
-    search(query: "YOUR_SEARCH_QUERY", type: REPOSITORY, first: 10) {
+  query GetRepositories($searchQuery: String!) {
+    search(query: $searchQuery, type: REPOSITORY, first: 10) {
       edges {
         node {
           ... on Repository {
@@ -19,9 +19,11 @@ const GET_REPOSITORIES = gql`
   }
 `;
 
-export function queryComponent() {
+export const queryComponent = ()  => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { loading, error, data } = useQuery(GET_REPOSITORIES);
+  const { loading, error, data } = useQuery(GET_REPOSITORIES, {
+    variables: { searchQuery: "Repos" }, // Используем "Repos" как значение поискового запроса
+  });
 
   if (loading) return <p>Loading ...</p>;
   if (error) return <p>Error: {error.message}</p>;
