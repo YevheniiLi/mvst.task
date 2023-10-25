@@ -1,22 +1,22 @@
 import React from 'react';
 import './Sidebar.css'; // Импортируем обычный CSS-файл
 import {GoPeople} from 'react-icons/go';
-import {PiStarThin} from 'react-icons/pi';
+import {FaRegStar} from 'react-icons/fa';
 import {CiMail} from 'react-icons/ci';
 
 const Sidebar = () => {
 
   const user = {
-    avatarUrl: '/gentleman.png',
-    name: 'Yevhenii Lymarenko',
-    username: 'YevheniiLi',
-    bio: 'Fullstack Developer in Tesla',
+    avatarUrl: 'logo/tesla.png',
+    name: 'Nicola Tesla',
+    username: 'Nico',
+    bio: 'Fullstack Developer in Tesla inc.',
     followers: 92, 
     following: 62, 
     stars: 253,
 
  
-    email: 'jekilllimarenko@gmail.com',
+    email: 'electronico@gmail.com',
     organizations: 'Организация 1, Организация 2',
   };
 
@@ -26,8 +26,9 @@ const Sidebar = () => {
       <h2 className="name">{user.name}</h2>
       <p className="username">{user.username}</p>
       <p className="bio">{user.bio}</p>
-      <div className='mb-3'>
-      <button className='follow-button'>Edit profile</button>
+      <div className='follow-section'>
+        <button className='follow-button'>Follow</button>
+        <span className='dots'>...</span>
       </div>
 
       <div className="stats">
@@ -41,7 +42,7 @@ const Sidebar = () => {
           <p className="stat-label">following</p>
         </div>
         <div className="stat">
-          <PiStarThin className='icon-star' />
+          <FaRegStar className='icon-star'style={{ color: '#6a737d' }} />
           <p className="stat-number">{user.stars}</p>
           <p className="stat-label"></p>
         </div>
@@ -51,9 +52,18 @@ const Sidebar = () => {
         <CiMail className='email-icon' />
         <p className="email">{user.email}</p>
       </div>
+      <hr className="separator" />
       <div className='organizations'>
-      <p className="user-organizations">Organizations: {user.organizations}</p>
-      </div>
+        <p className='title-organizations'>Organizations</p>
+        <div className='icon-organizations-container'>
+        <img src='icons/react.gif' alt='' className='icon-org' />
+        <img src='icons/apple.gif' alt='' className='icon-org' />
+        <img src='icons/javascript.gif' alt='' className='icon-org' />
+        <img src='icons/vscode.gif' alt='' className='icon-org' />
+        <img src='icons/github.gif' alt='' className='icon-org' />
+        <img src='icons/node.gif' alt='' className='icon-org' />
+
+    </div>      </div>
     </div>
   );
 };

@@ -1,109 +1,190 @@
 .sidebar {
-    padding: 0 24px;
+  padding: 280px 24px;
+  overflow-y: hidden;
 }
 
+.avatar {
+  border-radius: 50%; /* Устанавливаем радиус 50% для создания круглой формы */
+  width: 300px; /* Укажите желаемую ширину и высоту вашего аватара */
+  height: 300px;
+  object-fit: cover; /* Это свойство обеспечивает корректное масштабирование изображения */
+  transform: scaleX(-1); /* Зеркальное отражение изображения */
+  border: 1px solid #ddd; 
+  position: absolute;
+  top: 25px;
+  z-index: 100;
+  background-color: #ffffff;
+}
+
+
 .name {
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 25px;
-    font-weight: 600;
-    color: #24292e; 
-    margin: 0;
-    line-height: normal;
-  }
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #24292e;
+  margin: 0;
+  line-height: normal;
+}
 
 .username {
-    font-family: 'Helvetica Neue', sans-serif;
-    color: #656D76;
-    font-size: 20px;
-    padding-bottom: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #656D76;
+  font-size: 20px;
+  padding-bottom: 16px;
 }
 
 .bio {
-    font-family: 'Helvetica Neue', sans-serif;
-    color: #1F2328;
-    font-size: 18px;
-    padding-bottom: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #1F2328;
+  font-size: 18px;
+  padding-bottom: 16px;
 }
 
 .stats {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-bottom: 20px;
 }
 
 .stat {
-    display: flex;
-    text-align: center;
-    flex: 1;
-    padding: 0 10px;
+  display: flex;
+  text-align: center;
+  flex: 1;
+  position: relative;
+  align-items: center;
+}
+
+.stat:first-child {
+padding-right: 8px;
+}
+
+.stat:not(:first-child)::before {
+  content: '·';
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.stat:not(:first-child) {
+padding-left: 10px;
+padding-right: 10px;
 }
 
 .stat-label {
-    font-weight: bold;
-    font-size: 16px;
-    color: #6a737d; 
+  font-weight: bold;
+  font-size: 16px;
+  color: #6a737d;
+  margin-right: 5px;
 }
 
-  .stat-number {
-    font-size: 15px;
-    font-weight: bold;
-    margin-right: 5px;
-  }
-  
-.avatar {
-    border-radius: 30%;
-    transform: scaleX(-1);
+.stat-number {
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-left: 2px;
 }
 
 .follow-button {
-    width: 100%;
-    background-color: #F6F8FA;
-    color: #ffffff;
-    border: 1px solid #ddd;;
-    border-radius: 6px;
-    padding: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    color: black;
-    &:hover {
-      background-color: #e1e4e7;
-    }
-  }
+  width: 100%;
+  background-color: #F6F8FA;
+  color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: black;
+}
 
-  .icon-followers {
-    color: #6a737d;
-    size: 8px;
-    margin: 2px 5px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    cursor: pointer;
-  }
+.follow-section{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 
-  .icon-star{
-    size: 8px;
-    margin: 3px 5px;
-    cursor: pointer;
-  }
 
-  .email {
-    display: flex;
-    text-align: center;
-    cursor: pointer;
+.follow-button:hover {
+  background-color: #e1e4e7;
+}
+
+.dots {
+  font-size: 35px;
+  margin-left: 20px;
+  display: inline-block;
+  margin-top: -25px;
+  color: #6a737d;
+  cursor: pointer;
+}
+
+.icon-followers {
+  size: 8px;
+  margin: 2px 5px;
+  color: #6a737d;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-star {
+  margin: 3px 3px;
+  cursor: pointer;
+  
+}
+
+.icon-star svg {
+  color: #6a737d;
+}
+
+.email {
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+  padding-bottom: 6px;
 }
 
 .email-icon {
-    size: 10px;
-    margin: 4px 5px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin: 4px 5px;
+  color: #6a737d;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
-  
-  
-  
-  
-  
-  
+
+/* .stats,
+.title-organizations {
+  margin-top: 250px;
+} */
+
+.title-organizations {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #24292e;
+  margin: 0;
+  line-height: normal;
+  padding-top: 12px;
+  padding-bottom: 5px;
+}
+
+.icon-organizations-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.icon-org {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px; 
+}
