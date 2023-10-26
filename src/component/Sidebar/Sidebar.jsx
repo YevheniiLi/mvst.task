@@ -11,7 +11,7 @@ const Sidebar = () => {
     name: 'Nicola Tesla',
     username: 'Nico',
     bio: 'Fullstack Developer in Tesla inc.',
-    followers: 92, 
+    followers: 992, 
     following: 62, 
     stars: 253,
 

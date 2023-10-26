@@ -1,5 +1,3 @@
-/* Hero.css */
-
 .hero {
     background-color: #ffffff;
     padding: 20px;
@@ -100,7 +98,6 @@
     width: 90px;
     display: flex;
     text-align: center;
-    /* justify-content: center; */
     background-color: #F6F8FA;
     color: #ffffff;
     border: 1px solid #ddd;;
@@ -156,19 +153,16 @@
 }
 
 .repo-info .repo-update::before {
-  /* content: "Last Updated on: "; */
   font-weight: bold;
 }
 
 .repo-info .repo-url::before {
-  /* content: "URL: "; */
   font-weight: bold;
   word-break: break-all;
   color: #0366d6;
 }
 
 .repo-info .repo-stars::before {
-  /* content: "Stars: "; */
   font-weight: bold;
 }
 
@@ -200,14 +194,13 @@
 }
 
 .repo-info .repo-description::before {
-  /* content: "Description: "; */
   font-weight: bold;
 }
 
 .repositories-separator {
   content: "";
-  border-top: 1px solid #e1e4e8; /* Цвет и стиль разделительной линии */
-  margin-top: 16px; /* Регулируйте отступ между репозиториями */
+  border-top: 1px solid #e1e4e8; 
+  margin-top: 16px;
   display: block;
 }
 
@@ -232,11 +225,11 @@
 }
 
 .language-icon {
-  width: 12px; /* Выберите подходящий размер */
-  height: 12px; /* Выберите подходящий размер */
-  border-radius: 50%; /* Превращаем иконку в круг */
-  display: inline-block; /* Делаем элемент блочным для установки размера */
-  margin-right: 5px; /* Расстояние между иконкой и текстом */
+  width: 12px; 
+  height: 12px; 
+  border-radius: 50%; 
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .icon-branch {
@@ -245,42 +238,34 @@
 
 .repo-details {
   float: left;
-  width: 70%; /* Регулируйте ширину как вам удобно */
+  width: 70%;
   padding: 10px;
   box-sizing: border-box;
 }
 
 .chart-and-star {
   float: right;
-  width: 30%; /* Регулируйте ширину как вам удобно */
+  width: 30%;
 }
 
-/* canvas {
-  width: 100px; 
-  height: 30px;
-  margin-left: 10px; 
-} */
-
-
-/* ... Ваш текущий CSS ... */
 
 .left-section {
-  width: 70%; /* Ширина левой секции с информацией о репозитории */
+  width: 70%;
   float: left;
 }
 
 .right-section {
-  width: 30%; /* Ширина правой секции с кнопкой и графиком */
+  width: 30%; 
   float: right;
-  text-align: right; /* Для правого выравнивания кнопки и графика */
+  text-align: right; 
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
 canvas {
-  width: 100px; /* Установите желаемую ширину графика */
-  height: 30px; /* Установите желаемую высоту графика */
-  margin-left: 10px; /* Добавьте отступ с левой стороны */
+  width: 100px; 
+  height: 30px;
+  margin-left: 10px;
 }
 
