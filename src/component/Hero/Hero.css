@@ -78,13 +78,15 @@
   
   .repositories {
     margin-top: 20px;
+    margin-left: -10px;
   }
 
   .link-repositories {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    border-bottom: 1px solid #ddd ;
   }
   
   .group-repositories {
@@ -118,3 +120,167 @@
     margin: 3px 5px;
     color: #6a737d;
   }
+
+  .repo-name {
+    padding-bottom: 10px;
+  }
+
+  .repo-info {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #586069;
+}
+
+.repo-info p {
+  margin: 5px 0;
+}
+
+.repo-info .repo-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0366d6;
+}
+
+.repo-info .repo-language::before {
+  /* content: "Language: "; */
+  font-weight: bold;
+}
+
+.repo-info .repo-language {
+  color: #586069;
+}
+
+.repo-info .repo-branche::before {
+  content: "Branches: ";
+  font-weight: bold;
+}
+
+.repo-info .repo-update::before {
+  /* content: "Last Updated on: "; */
+  font-weight: bold;
+}
+
+.repo-info .repo-url::before {
+  /* content: "URL: "; */
+  font-weight: bold;
+  word-break: break-all;
+  color: #0366d6;
+}
+
+.repo-info .repo-stars::before {
+  /* content: "Stars: "; */
+  font-weight: bold;
+}
+
+.repo-info-line > .repo-language,
+.repo-info-line > .repo-stars,
+.repo-info-line > .repo-branch,
+.repo-info-line > .repo-update {
+  margin-right: 15px; 
+}
+
+.repo-stars {
+  display: flex;
+  align-items: center;
+}
+
+.repo-info .repo-homepage::before {
+  content: "Homepage: ";
+  font-weight: bold;
+  word-break: break-all;
+  color: #0366d6;
+}
+
+.repo-info .repo-forks::before {
+  content: "Forks: ";
+  font-weight: bold;
+}
+.popular-star{
+  margin-right: 5px;
+}
+
+.repo-info .repo-description::before {
+  /* content: "Description: "; */
+  font-weight: bold;
+}
+
+.repositories-separator {
+  content: "";
+  border-top: 1px solid #e1e4e8; /* Цвет и стиль разделительной линии */
+  margin-top: 16px; /* Регулируйте отступ между репозиториями */
+  display: block;
+}
+
+.repo-info-line {
+  display: flex;
+  align-items: center;
+}
+
+.repo-language {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  color: #6a737d;
+}
+
+.repo-branch,
+.repo-update {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  color: #6a737d;
+}
+
+.language-icon {
+  width: 12px; /* Выберите подходящий размер */
+  height: 12px; /* Выберите подходящий размер */
+  border-radius: 50%; /* Превращаем иконку в круг */
+  display: inline-block; /* Делаем элемент блочным для установки размера */
+  margin-right: 5px; /* Расстояние между иконкой и текстом */
+}
+
+.icon-branch {
+  margin-right: 5px;
+}
+
+.repo-details {
+  float: left;
+  width: 70%; /* Регулируйте ширину как вам удобно */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.chart-and-star {
+  float: right;
+  width: 30%; /* Регулируйте ширину как вам удобно */
+}
+
+/* canvas {
+  width: 100px; 
+  height: 30px;
+  margin-left: 10px; 
+} */
+
+
+/* ... Ваш текущий CSS ... */
+
+.left-section {
+  width: 70%; /* Ширина левой секции с информацией о репозитории */
+  float: left;
+}
+
+.right-section {
+  width: 30%; /* Ширина правой секции с кнопкой и графиком */
+  float: right;
+  text-align: right; /* Для правого выравнивания кнопки и графика */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+canvas {
+  width: 100px; /* Установите желаемую ширину графика */
+  height: 30px; /* Установите желаемую высоту графика */
+  margin-left: 10px; /* Добавьте отступ с левой стороны */
+}
+

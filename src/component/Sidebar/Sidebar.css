@@ -4,11 +4,11 @@
 }
 
 .avatar {
-  border-radius: 50%; /* Устанавливаем радиус 50% для создания круглой формы */
-  width: 300px; /* Укажите желаемую ширину и высоту вашего аватара */
+  border-radius: 50%; 
+  width: 300px; 
   height: 300px;
-  object-fit: cover; /* Это свойство обеспечивает корректное масштабирование изображения */
-  transform: scaleX(-1); /* Зеркальное отражение изображения */
+  object-fit: cover; 
+  transform: scaleX(-1);
   border: 1px solid #ddd; 
   position: absolute;
   top: 25px;
@@ -137,7 +137,6 @@ padding-right: 10px;
 .icon-star {
   margin: 3px 3px;
   cursor: pointer;
-  
 }
 
 .icon-star svg {
@@ -160,11 +159,6 @@ padding-right: 10px;
   text-align: center;
   justify-content: center;
 }
-
-/* .stats,
-.title-organizations {
-  margin-top: 250px;
-} */
 
 .title-organizations {
   font-family: 'Helvetica Neue', sans-serif;
