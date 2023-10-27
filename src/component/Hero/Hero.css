@@ -1,8 +1,24 @@
+
 .hero {
     background-color: #ffffff;
     padding: 20px;
-  }
+    flex: 1;
+}
   
+.left-section {
+  width: 70%;
+  float: left;
+}
+
+.right-section {
+  width: 30%; 
+  float: right;
+  text-align: right; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
   .search {
     display: flex;
     align-items: center;
@@ -20,9 +36,10 @@
     transition: background-color 0.3s ease;
     color: black;
     margin-right: 10px;
-    &:hover {
-      background-color: #ffffff;
-    }
+  }
+
+  .search-input:hover {
+    background-color: #ffffff;
   }
   
   .search-button {
@@ -51,9 +68,10 @@
     transition: background-color 0.3s ease;
     color: #6a737d;
     margin-left: 10px;
-    &:hover {
-      background-color: #e1e4e7;
-    }
+  }
+
+  .filter-button:hover {
+    background-color: #e1e4e7;
   }
 
   .black-text {
@@ -107,9 +125,11 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: black;
-    &:hover {
-      background-color: #e1e4e7;
-    }
+  }
+
+  .star-button:hover{
+    background-color: #e1e4e7;
+
   }
 
   .star-icon {
@@ -139,7 +159,6 @@
 }
 
 .repo-info .repo-language::before {
-  /* content: "Language: "; */
   font-weight: bold;
 }
 
@@ -189,9 +208,8 @@
   content: "Forks: ";
   font-weight: bold;
 }
-.popular-star{
-  margin-right: 5px;
-}
+
+
 
 .repo-info .repo-description::before {
   font-weight: bold;
@@ -248,24 +266,30 @@
   width: 30%;
 }
 
-
-.left-section {
-  width: 70%;
-  float: left;
+.bold-text {
+  font-weight: bold;
 }
 
-.right-section {
-  width: 30%; 
-  float: right;
-  text-align: right; 
+.filter-info {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-around;
 }
 
-canvas {
-  width: 100px; 
-  height: 30px;
-  margin-left: 10px;
+.clear-filter-button {
+  background-color: #F6F8FA;
+  color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+
 

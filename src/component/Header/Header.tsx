@@ -4,16 +4,20 @@ import { PiNotebook } from "react-icons/pi";
 import { GoProject } from "react-icons/go";
 import "./Header.css";
 
-const Header = () => {
+interface HeaderProps {
+  repositoriesCount: number;
+}
+
+const Header: React.FC<HeaderProps> = ( ) => {
   const sections = [
     { id: "overview", label: "Overview", Icon: PiBookOpenThin },
-    { id: "repositories", label: "Repositories", Icon: PiNotebook },
+    { id: "repositories", label: `Repositories`, Icon: PiNotebook },
     { id: "projects", label: "Projects", Icon: GoProject },
   ];
 
-  const [selectedSection, setSelectedSection] = useState(null);
+  const [selectedSection, setSelectedSection] = useState<string | null>(null);
 
-  const handleSectionClick = (section) => {
+  const handleSectionClick = (section: string) => {
     setSelectedSection(section);
   };
 

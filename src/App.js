@@ -1,18 +1,16 @@
 import "./styles/styles.css";
-import Header from "./component/Header/Header";
+import Header from "./component/Header/Header.tsx";
 import Hero from "./component/Hero/Hero";
 import Sidebar from "./component/Sidebar/Sidebar";
-// import {queryComponent} from './useQuery';
 
 function App() {
   return (
-    <div className="app-container">
+    <div className="app-container"> 
       <Header />
       <div className="outline"></div>
       <div className="main-container">
         <Sidebar />
         <Hero />
-        {/* {queryComponent()} */}
       </div>
     </div>
   );

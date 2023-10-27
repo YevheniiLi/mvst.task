@@ -1,31 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
-const ChartCanvas = ({ repository }) => {
-  const chartId = `chart-${repository.name}`;
+const ChartCanvas = ({ data }) => {
+  const canvasRef = useRef(null);
 
   useEffect(() => {
-    if (!repository) {
-      return;
-    }
+    if (canvasRef.current && data) {
+      const ctx = canvasRef.current.getContext("2d");
 
-    const canvas = document.getElementById(chartId);
-
-    if (canvas) {
-      if (canvas.chart) {
-        canvas.chart.destroy();
+      if (ctx.chart) {
+        ctx.chart.destroy();
       }
-
-      const ctx = canvas.getContext("2d");
-
-      const randomData = Array.from({ length: 5 }, () => Math.floor(Math.random() * 20));
 
       const chartData = {
         labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
         datasets: [
           {
             label: "Contributions",
-            data: randomData,
+            data: data,
             backgroundColor: "rgba(75, 192, 192, 0.2)",
             borderColor: "rgba(75, 192, 192, 1)",
             borderWidth: 1,
@@ -38,13 +30,11 @@ const ChartCanvas = ({ repository }) => {
         data: chartData,
       });
 
-      canvas.chart = newChart;
+      ctx.chart = newChart;
     }
-  }, [chartId, repository]);
+  }, [data]);
 
-  return (
-    <canvas id={chartId} width="500" height="200"></canvas>
-  );
+  return <canvas ref={canvasRef} width="500" height="200" />;
 };
 
 export default ChartCanvas;

@@ -4,21 +4,20 @@
 }
 
 .avatar {
-  border-radius: 50%; 
-  width: 300px; 
+  border-radius: 50%;
+  width: 300px;
   height: 300px;
-  object-fit: cover; 
+  object-fit: cover;
   transform: scaleX(-1);
-  border: 1px solid #ddd; 
+  border: 1px solid #ddd;
   position: absolute;
   top: 25px;
   z-index: 100;
   background-color: #ffffff;
 }
 
-
 .name {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 25px;
   font-weight: 600;
   color: #24292e;
@@ -27,15 +26,15 @@
 }
 
 .username {
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #656D76;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #656d76;
   font-size: 20px;
   padding-bottom: 16px;
 }
 
 .bio {
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #1F2328;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #1f2328;
   font-size: 18px;
   padding-bottom: 16px;
 }
@@ -56,11 +55,11 @@
 }
 
 .stat:first-child {
-padding-right: 8px;
+  padding-right: 8px;
 }
 
 .stat:not(:first-child)::before {
-  content: '·';
+  content: "·";
   font-size: 16px;
   position: absolute;
   top: 50%;
@@ -72,8 +71,8 @@ padding-right: 8px;
 }
 
 .stat:not(:first-child) {
-padding-left: 10px;
-padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .stat-label {
@@ -92,7 +91,7 @@ padding-right: 10px;
 
 .follow-button {
   width: 100%;
-  background-color: #F6F8FA;
+  background-color: #f6f8fa;
   color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -103,13 +102,12 @@ padding-right: 10px;
   color: black;
 }
 
-.follow-section{
+.follow-section {
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
-
 
 .follow-button:hover {
   background-color: #e1e4e7;
@@ -161,7 +159,7 @@ padding-right: 10px;
 }
 
 .title-organizations {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: #24292e;
@@ -176,9 +174,8 @@ padding-right: 10px;
   align-items: center;
 }
 
-
 .icon-org {
   width: 50px;
   height: 50px;
-  margin-right: 10px; 
+  margin-right: 10px;
 }

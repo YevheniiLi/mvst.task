@@ -5,7 +5,3 @@
 .main-container {
     display: flex;
   }
-  
-  .hero {
-    flex: 1;
-  }

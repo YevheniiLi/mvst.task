@@ -1,4 +1,5 @@
 import { useQuery, gql } from "@apollo/client";
+
 const GET_REPOSITORIES = gql`
   query GetRepositories($first: Int, $after: String) {
     viewer {
@@ -38,8 +39,6 @@ const GET_REPOSITORIES = gql`
     }
   }
 `;
-
-
 
 export const queryComponent = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
